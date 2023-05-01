@@ -6,9 +6,6 @@ import java.util.HashMap;
 import java.util.Map.Entry;
 
 public class Sort {
-	public static void main(String[] args) {
-		sortHuman(ReadText.readFile());
-	}
 	
 	// likeList 만들어서 정렬하기
 	public static void sortHuman(ArrayList<HashMap<Integer, Human>> humans) {

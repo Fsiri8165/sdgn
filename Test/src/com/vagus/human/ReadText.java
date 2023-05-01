@@ -18,26 +18,20 @@ public class ReadText {
 					new FileInputStream("C:\\Users\\LENOVO\\Downloads\\tc3_answer1.txt"), "utf-8"));
 			String line = null;
 			String[] str = null;
+			boolean isMan = true;
 			HashMap<Integer, Human> mans = new HashMap<>();
 			HashMap<Integer, Human> womans = new HashMap<>();
 			while ((line = br.readLine()) != null) {
 				str = line.split(" ");
-				if (str[0].equals("W")) break;
-				if (!Character.isDigit(str[0].charAt(0))) continue; // 첫줄은 쓸모없
-				mans.put(Integer.parseInt(str[0]), new Human(Integer.parseInt(str[1]), false));
-			}
-			
-			womans.put(Integer.parseInt(str[0]), new Human(Integer.parseInt(str[1]), false)); // 한 번 해줘야함
-			
-			while ((line = br.readLine()) != null) {
-				str = line.split(" ");
+				if (str[0].equals("W")) isMan = false;
 				if (!Character.isDigit(str[0].charAt(0))) continue;
-				womans.put(Integer.parseInt(str[0]), new Human(Integer.parseInt(str[1]), false));
+				if (isMan) mans.put(Integer.parseInt(str[0]), new Human(Integer.parseInt(str[1]), false));
+				else womans.put(Integer.parseInt(str[0]), new Human(Integer.parseInt(str[1]), false));
 			}
 			ArrayList<HashMap<Integer, Human>> ret = new ArrayList<>();
 			ret.add(mans);
 			ret.add(womans);
-			return ret; // 바꿔야함
+			return ret;
 		} catch (Exception e) {
 			return null;
 		} finally {
@@ -49,5 +43,6 @@ public class ReadText {
 	}
 
 	public static void main(String[] args) {
+		readFile();
 	}
 }

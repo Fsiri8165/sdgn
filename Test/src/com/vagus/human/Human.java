@@ -3,21 +3,23 @@ package com.vagus.human;
 import java.util.ArrayList;
 
 public class Human {
-	private ArrayList<Integer> likeList;
-	private int myF;
-	private boolean couple;
+	private ArrayList<Integer> likeList; // [2, 33, 44]
+	private int myF; 
+	private boolean couple; 
+	private int lovePick; 
 	
 	public Human() {
 		// TODO Auto-generated constructor stub
 	}
-
-	public Human(ArrayList<Integer> likeList, int myF, boolean couple) {
+	
+	public Human(ArrayList<Integer> likeList, int myF) {
 		super();
 		this.likeList = likeList;
 		this.myF = myF;
-		this.couple = couple;
+		this.couple = false;
+		this.lovePick = 0;
 	}
-	
+
 	public Human(int myF, boolean couple) {
 		super();
 		this.myF = myF;
@@ -46,6 +48,14 @@ public class Human {
 
 	public void setCouple(boolean couple) {
 		this.couple = couple;
+	}
+
+	public int getLovePick() {
+		return lovePick;
+	}
+
+	public void setLovePick(int lovePick) {
+		this.lovePick = lovePick;
 	}
 	
 	

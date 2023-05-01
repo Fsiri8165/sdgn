@@ -10,7 +10,7 @@ public class Sort {
 		sortHuman(ReadText.readFile());
 	}
 	
-	// likeList 만들어서 정렬
+	// likeList 만들어서 정렬하기
 	public static void sortHuman(ArrayList<HashMap<Integer, Human>> humans) {
 		ArrayList<Integer> mans = new ArrayList<>();
 		ArrayList<Integer> womans = new ArrayList<>();

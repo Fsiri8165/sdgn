@@ -17,6 +17,12 @@ public class Human {
 		this.myF = myF;
 		this.couple = couple;
 	}
+	
+	public Human(int myF, boolean couple) {
+		super();
+		this.myF = myF;
+		this.couple = couple;
+	}
 
 	public ArrayList<Integer> getLikeList() {
 		return likeList;

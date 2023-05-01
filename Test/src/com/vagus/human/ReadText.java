@@ -15,7 +15,7 @@ public class ReadText {
 		BufferedReader br = null;
 		try {
 			br = new BufferedReader(new InputStreamReader(
-					new FileInputStream("C:\\Users\\LENOVO\\Downloads\\tc3_answer1.txt"), "utf-8"));
+					new FileInputStream("C:\\Users\\신용대\\Downloads\\tc3_answer1.txt"), "utf-8"));
 			String line = null;
 			String[] str = null;
 			boolean isMan = true;

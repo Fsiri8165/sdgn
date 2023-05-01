@@ -14,7 +14,6 @@ public class Sort {
 	public static void sortHuman(ArrayList<HashMap<Integer, Human>> humans) {
 		ArrayList<Integer> mans = new ArrayList<>();
 		ArrayList<Integer> womans = new ArrayList<>();
-		ArrayList<Integer> likeList = new ArrayList<>();
 		for (Entry<Integer, Human> man : humans.get(0).entrySet()) {
 			mans.add(man.getKey());
 		}
@@ -32,13 +31,8 @@ public class Sort {
 				@Override
 				public int compare(Integer o1, Integer o2) {
 					if (f == 0) {
-						if (Math.abs(o1 - m) > Math.abs(o2 - m)) {
-							return -1;
-						} else if (Math.abs(o1 - m) < Math.abs(o2 - m)) {
-							return 1;
-						} else {
-							return o1.compareTo(o2);
-						}
+						if (Math.abs(o1 - m) == Math.abs(o2 - m)) return o1-o2;
+						return -(Math.abs(o1 - m) - Math.abs(o2 - m));
 					} else {
 						if (Math.abs(o1 - m) > Math.abs(o2 - m)) {
 							return 1;
@@ -50,8 +44,6 @@ public class Sort {
 					}
 				}
 			});
-			System.out.println(m);
-			System.out.println(womans);
 			h.setLikeList((ArrayList<Integer>) womans.clone());
 		}
 		System.out.println("--------------------------------");
@@ -82,8 +74,6 @@ public class Sort {
 					}
 				}
 			});
-			System.out.println(m);
-			System.out.println(mans);
 			h.setLikeList((ArrayList<Integer>) mans.clone());
 		}
 		

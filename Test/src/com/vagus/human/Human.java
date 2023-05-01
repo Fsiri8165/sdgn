@@ -1,45 +1,46 @@
 package com.vagus.human;
 
+import java.util.ArrayList;
+
 public class Human {
-	private int num;
-	private String sex;
-	private int like;
+	private ArrayList<Integer> likeList;
+	private int myF;
+	private boolean couple;
 	
 	public Human() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public int getNum() {
-		return num;
-	}
-
-	public void setNum(int num) {
-		this.num = num;
-	}
-
-	public String getSex() {
-		return sex;
-	}
-
-	public void setSex(String sex) {
-		this.sex = sex;
-	}
-
-	public int getLike() {
-		return like;
-	}
-
-	public void setLike(int like) {
-		this.like = like;
-	}
-
-	public Human(int num, String sex, int like) {
+	public Human(ArrayList<Integer> likeList, int myF, boolean couple) {
 		super();
-		this.num = num;
-		this.sex = sex;
-		this.like = like;
+		this.likeList = likeList;
+		this.myF = myF;
+		this.couple = couple;
+	}
+
+	public ArrayList<Integer> getLikeList() {
+		return likeList;
+	}
+
+	public void setLikeList(ArrayList<Integer> likeList) {
+		this.likeList = likeList;
+	}
+
+	public int getMyF() {
+		return myF;
+	}
+
+	public void setMyF(int myF) {
+		this.myF = myF;
+	}
+
+	public boolean isCouple() {
+		return couple;
+	}
+
+	public void setCouple(boolean couple) {
+		this.couple = couple;
 	}
 	
 	
-
 }
